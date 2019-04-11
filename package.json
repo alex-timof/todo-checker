@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-
   "author": "",
   "license": "",
   "lockfileVersion": 1,
-  "dependencies":{
+  "dependencies": {
     "electron": "^4.1.0 "
   }
-
 }

@@ -17,14 +17,10 @@ function createWindow(){
       protocol: 'file:',
       slashes: true,
     }));
-find()
     //win.webContents.openDevTools();
 
-
     win.on('closed', ()=>{
-
       win = null;
-
     });
 }
 
