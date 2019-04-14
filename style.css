@@ -8,6 +8,25 @@
   z-index: 999;
   background-color: #ffffff;
 }
-#app{
-    padding-top: 100px;
+#tasks{
+  display:block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+  padding-top: 120px;
+  margin: 0 auto;
+  margin-left: 10px;
+}
+
+#path{
+    width: 98%;
+  margin: 0 auto;
+  margin-left: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 666;
+  background-color: #ffffff;
+  padding-top: 100px;
 }

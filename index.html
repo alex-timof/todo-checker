@@ -6,26 +6,42 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <title>ToDo-Checker</title>
+
+    <!---progress bar --->
+    <div class="progress">
+      <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="position:absolute, z-index: 1000"></div>
+    </div>
+
+    <!---title --->
+    <div class="container-fluid" id="title" >
+      <h1 class="display-4">ToDo-Checker</h1>
+      <hr style="border-style: solid none; border-width: 2px">
+    </div>
+
   </head>
   <body>
     <script src="_js/view.js" charset="utf-8"></script>
     <script src="_js/controller.js" charset="utf-8"></script>
     <script src="_js/model.js" charset="utf-8"></script>
 
-
     <script>require('./render.js');</script>
 
-    <div class="container-fluid" id="title" >
-      <h1 class="display-4">TESTING THE APP</h1>
-      <hr style="border-style: solid none; border-width: 2px">
+    <!---path input --->
+    <div class="input-group mb-3" id="path">
+      <input type="text" ref='text' class="form-control" placeholder="Path \." aria-label="Path \." aria-describedby="basic-addon2" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" v-on:click="update()"><i class="fas fa-arrow-right"></i></button>
+      </div>
     </div>
+    <!---path input --->
 
-    <div id="app">
-      <div class="list-group">
-        <button type="button" class="list-group-item list-group-item-action" v-for="todo in todos">
+    <!---list of tasks --->
+    <div id="tasks">
+      <div class="list-group list-group-flush">
+        <button type="button" class="list-group-item list-group-item-action " v-for="todo in todos" v-on:click="details(todo)">
           <div class="d-flex w-100 justify-content-between" id="list-element">
             <div >
               {{ todo.text }}
@@ -35,7 +51,8 @@
           </div>
         </button>
       </div>
-      </div>
+    </div>
+  <!---list of tasks --->
 
     <script src="_js/vue.js" charset=" utf-8"></script>
   </body>
