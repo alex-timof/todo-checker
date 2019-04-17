@@ -5,6 +5,10 @@ var todos = [];
 var test = ""
 const re = new RegExp('.*todo?:\s*([^\n\r]*)','i');
 
+for (var i = 0; i < 25; i++) {
+  createTask("task"+i, "/.", "somebody", (i%2==0)?"!":"",Math.log((i+1)^2));
+}
+
 function updateTasks(pathName = coreFolder+'\\'){
   var files = fs.readdirSync(pathName);
   files.forEach((fileName)=>{
@@ -14,7 +18,7 @@ function updateTasks(pathName = coreFolder+'\\'){
         sentence.forEach((value)=>{
           search = value.match(re);
           if(search!==null){
-            createTask(search[1], fs.statSync(pathName+fileName)['birthtime'], pathName+fileName);
+            createTask(search[1], pathName+fileName);
           }
         });
     }catch(err) {
@@ -26,6 +30,7 @@ function updateTasks(pathName = coreFolder+'\\'){
 
 }
 
-function createTask(text, date, path){
-  todos.push({text: text, time:date, path:path});
+function createTask(text, path, author="admin", imp=" ", date=" "){
+  todos.push({importanse:imp, text: text, date:date, path:path, author: author});
 }
+ // TODO: test

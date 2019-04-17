@@ -8,7 +8,9 @@ function createWindow(){
   win = new BrowserWindow(
     {
       width: 700,
-      height: 500,
+      height: 520,
+      /frame: false,
+      resizable:false,
       icon: __dirname + "/_img/icon.png",
     });
 

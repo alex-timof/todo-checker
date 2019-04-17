@@ -7,16 +7,15 @@
   left: 0;
   z-index: 999;
   background-color: #ffffff;
+  -webkit-app-region: drag;
 }
 #tasks{
-  display:block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 95%;
-  padding-top: 120px;
-  margin: 0 auto;
-  margin-left: 10px;
+  padding: 10px;
+  padding-top: 150px;
+}
+
+th {
+  cursor:pointer;
 }
 
 #path{
