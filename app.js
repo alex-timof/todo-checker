@@ -9,7 +9,7 @@ function createWindow(){
     {
       width: 700,
       height: 520,
-      /frame: false,
+      frame: false,
       resizable:false,
       icon: __dirname + "/_img/icon.png",
     });

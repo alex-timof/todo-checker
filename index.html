@@ -49,10 +49,10 @@
         </thead>
         <tbody v-for="todo in sorted" v-on:click="details(todo)">
           <tr class="clickable-row">
-            <th>{{todo.importanse}}</th>
-            <th>{{todo.text}}</th>
-            <th>{{todo.author}}</th>
-            <th>{{todo.date}}</th>
+            <th scope="row">{{todo.importanse}}</th>
+            <th style="font-weight: normal">{{todo.text}}</th>
+            <th style="font-weight: normal">{{todo.author}}</th>
+            <th style="font-weight: normal">{{todo.date}}</th>
           </tr>
         </tbody>
       </table>
