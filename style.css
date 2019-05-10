@@ -1,11 +1,11 @@
 #title{
   height: 100px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 666;
   background-color: #ffffff;
   -webkit-app-region: drag;
 }
@@ -16,7 +16,16 @@
 
 th {
   cursor:pointer;
+}
 
+#close{
+  cursor:pointer;
+  margin: 0 auto;
+  position: fixed;
+  top: 10px;
+  left: auto;
+  right: 10px;
+  z-index: 999;
 }
 
 #path{
@@ -26,7 +35,7 @@ th {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 666;
+  z-index: 333;
   background-color: #ffffff;
   padding-top: 100px;
 }

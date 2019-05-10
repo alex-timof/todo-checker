@@ -1,7 +1,10 @@
+const remote = require('electron').remote;
+
 new Vue({
   // TODO: one more time
   el: '#tasks',
   data:{
+    w: remote.getCurrentWindow(),
     todos: todos,
     currentSort:'',
     currentSortDir:'asc',
@@ -16,6 +19,10 @@ new Vue({
     selected:'text'
   },
   methods: {
+    close: function(){
+      if(confirm("Are you sure?"))
+        this.w.close();
+    },
     details: function (t) {
       alert(t.importanse +" - "+ t.text+"\n"+t.path+"\n"+t.author+"\n"+t.time);
     },

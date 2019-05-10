@@ -14,7 +14,7 @@
     <!---title--->
     <div class="container-fluid" id="title" >
       <h1 class="display-4">ToDo-Checker</h1>
-      <hr style="border-style: solid none; border-width: 2px">
+      <hr style="border-style: solid none; border-width: 2px; width: 105%;">
     </div>
     <!---title--->
 
@@ -38,6 +38,7 @@
 
     <!---table of tasks --->
     <div id="tasks">
+      <i class="far fa-times-circle" id="close" @click="close"></i>
       <table class="table">
         <thead>
           <tr>
